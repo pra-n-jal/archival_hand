@@ -29,7 +29,7 @@ function handleResize() {
 window.addEventListener('resize', handleResize);
 handleResize();
 
-// --- KEYBOARD CONTROLS ---
+//KEYBOARD CONTROLS
 window.addEventListener('keydown', (e) => {
     if (e.key === 'a' || e.key === 'A' || e.key === 'ArrowLeft') moveLeft = true;
     if (e.key === 'd' || e.key === 'D' || e.key === 'ArrowRight') moveRight = true;
@@ -40,7 +40,7 @@ window.addEventListener('keyup', (e) => {
     if (e.key === 'd' || e.key === 'D' || e.key === 'ArrowRight') moveRight = false;
 });
 
-// --- MOUSE DRAG CONTROLS ---
+//MOUSE DRAG CONTROLS
 window.addEventListener('mousedown', (e) => {
     isDragging = true;
     lastX = e.clientX;
@@ -58,7 +58,7 @@ window.addEventListener('mouseup', () => {
     isDragging = false;
 });
 
-// --- MAIN GAME LOOP (ONE SINGLE FUNCTION) ---
+//MAIN GAME LOOP
 let lastTime = performance.now();
 
 function gameloop(now) {
@@ -101,5 +101,5 @@ function gameloop(now) {
     requestAnimationFrame(gameloop);
 }
 
-// Start loop!
+// Start loopie
 requestAnimationFrame(gameloop);
